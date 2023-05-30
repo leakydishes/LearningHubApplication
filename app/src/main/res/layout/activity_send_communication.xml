@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/light_grey"
+    tools:context=".activities.SendCommunication">
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:fontFamily="@font/lobster"
+            android:textSize="35dp"
+            android:letterSpacing="0.1"
+            android:padding="15dp"
+            android:text="Learning Hub"
+            android:textAlignment="center"
+            android:textColor="@color/cadet_blue"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--Scroll view for content-->
+    <ScrollView
+        android:layout_height="450dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+                <!--Title To-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="To "
+                    android:layout_margin="16dp"
+                    android:textColor="@color/cadet_blue"
+                    android:textColorHint="@color/cadet_blue"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <!--Input Email Address-->
+                <EditText
+                    android:id="@+id/inputEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Email Address "
+                    android:layout_marginHorizontal="16dp"
+                    android:textColorHint="@color/cadet_blue"
+                    android:textColor="@color/cadet_blue"
+                    android:background="@drawable/edit_text_middle"
+                    android:padding="16dp"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <!--Title Subject-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subject "
+                    android:layout_margin="16dp"
+                    android:textColor="@color/cadet_blue"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <!--Input subject-->
+                <EditText
+                    android:id="@+id/inputSubject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint=""
+                    android:layout_margin="16dp"
+                    android:textColor="@color/cadet_blue"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_middle"
+                    android:textStyle="bold"
+                    android:textSize="20dp" />
+
+                <!--Title Message-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Message "
+                    android:layout_margin="16dp"
+                    android:textColor="@color/cadet_blue"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+
+                <!--Input message-->
+                <TextView
+                    android:id="@+id/inputMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:textColor="@color/cadet_blue"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_middle"
+                    android:textStyle="bold"
+                    android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+        <!--Buttons-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="540dp"
+            android:layout_height="100dp">
+
+                <!--Send email-->
+                <Button
+                    android:id="@+id/btnSend"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button"
+                    android:text="Email" />
+
+                <!--Return to menu-->
+                <Button
+                    android:id="@+id/btnReturnMenu"
+                    android:layout_gravity="center"
+                    android:layout_height="50dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button"
+                    android:text="Menu" />
+        </LinearLayout>
+</RelativeLayout>

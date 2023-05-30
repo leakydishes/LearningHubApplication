@@ -1,0 +1,48 @@
+<androidx.cardview.widget.CardView
+    android:id="@+id/view_lists"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginStart="10dp"
+    app:layout_constrainedHeight="true"
+    android:layout_marginLeft="11dp"
+    android:layout_marginRight="11dp"
+    app:cardCornerRadius="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    app:cardElevation="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+            <!--Title name-->
+            <TextView
+                android:id="@+id/display_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/cadet_blue"
+                android:text="Text Title"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <!--Title content-->
+            <TextView
+                android:id="@+id/display_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/cadet_blue"
+                android:textSize="20sp"
+                android:lines="10"
+                android:text="Text Content" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

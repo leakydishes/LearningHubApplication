@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.HomeActivity"
+    android:padding="16dp"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:background="@color/light_grey"
+    android:orientation="vertical">
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:fontFamily="@font/lobster"
+            android:textSize="35dp"
+            android:letterSpacing="0.1"
+            android:padding="15dp"
+            android:text="Learning Hub"
+            android:textAlignment="center"
+            android:textColor="@color/cadet_blue"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        android:padding="28dp"
+        android:layout_height="match_parent">
+
+        <!--user name-->
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.8"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:text="Hello, user!"
+            android:textAlignment="center"
+            android:textColor="@color/cadet_blue"
+            android:textSize="25dp" />
+
+        <!-- User image-->
+        <ImageView
+            android:id="@+id/user_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_marginBottom="30dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/userphoto"/>
+    </LinearLayout>
+
+    <!--Smart reply-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginTop="180dp"
+        android:orientation="horizontal">
+
+        <!--Write message here-->
+        <EditText
+            android:id='@+id/etSendMessage'
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Ask a Question"
+            android:background="@drawable/edit_text_middle"
+            android:padding="15dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/cadet_blue"/>
+
+        <!--Send Reply-->
+        <Button
+            android:id="@+id/btnSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button"
+            android:text="Send" />
+    </LinearLayout>
+
+    <!--Smart reply output-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="270dp"
+        android:orientation="horizontal">
+
+        <!--Receive reply-->
+        <TextView
+            android:id="@+id/textReply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:background="@drawable/edit_text_middle_large"
+            android:textStyle="bold"
+            android:padding="15dp"
+            android:text="Reply"
+            android:textAlignment="center"
+            android:textColor="@color/cadet_blue"
+            android:textSize="20dp" />
+    </LinearLayout>
+
+    <!--Select an option-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.8"
+        android:padding="15dp"
+        android:text="Select an Option: "
+        android:layout_marginTop="390dp"
+        android:textStyle="bold"
+        android:textColor="@color/cadet_blue"
+        android:textSize="20dp" />
+
+    <!--Menu selection-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="450dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!--Convert image to text-->
+        <Button
+            android:id="@+id/btnImageToText"
+            android:layout_gravity="center"
+            android:layout_height="110dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Image to Text" />
+
+        <!--Text library-->
+        <Button
+            android:id="@+id/btnLibrary"
+            android:layout_gravity="center"
+            android:layout_height="110dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/button"
+            android:text="My Text List" />
+    </LinearLayout>
+
+    <!--Smart reply output-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="580dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+    <!--Button sign in-->
+    <Button
+        android:id="@+id/btn_sign_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:padding="10dp"
+        android:text="Sign out?"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:textColor="@color/cadet_blue"
+        android:fontFamily="sans-serif"
+        android:focusable="true" />
+    </LinearLayout>
+</RelativeLayout>

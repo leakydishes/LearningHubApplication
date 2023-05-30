@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+    // Add the Google services Gradle plugin
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.learninghubapplication'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.learninghubapplication"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation 'com.google.mlkit:smart-reply-common:16.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Recyclerview
+    implementation "androidx.recyclerview:recyclerview:1.2.1"
+    implementation "com.makeramen:roundedimageview:2.3.0"
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:32.0.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    // Firebase reference
+    // https://firebase.google.com/docs/android/setup#available-libraries
+
+    // ML smart reply
+    implementation 'com.google.mlkit:smart-reply:17.0.2'
+
+    // ML Text recognition
+    implementation 'com.google.android.gms:play-services-mlkit-text-recognition:16.2.0'
+
+    // Room
+    implementation "androidx.room:room-runtime:2.4.3"
+    annotationProcessor "androidx.room:room-compiler:2.4.3"
+
+    //picasso for setting image button
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+    //material
+    implementation 'com.google.android.material:material:<version>'
+
+    // glide
+    // Glide v4 uses this new annotation processor -- see https://bumptech.github.io/glide/doc/generatedapi.html
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+}

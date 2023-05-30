@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/light_grey"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".activities.TextDetails">
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:fontFamily="@font/lobster"
+            android:textSize="35dp"
+            android:letterSpacing="0.1"
+            android:padding="15dp"
+            android:text="Learning Hub"
+            android:textAlignment="center"
+            android:textColor="@color/cadet_blue"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--Scroll view for content-->
+    <ScrollView
+        android:layout_height="400dp"
+        android:layout_marginTop="80dp"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <!--header for text-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/cadet_blue"
+                android:textSize="25sp"
+                android:text="Title" />
+
+            <!--Title for text-->
+            <TextView
+                android:id="@+id/display_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:textStyle="bold"
+                android:padding="16dp"
+                android:textColor="@color/cadet_blue"
+                android:background="@drawable/edit_text_middle"
+                android:layout_marginBottom="10dp"
+                android:textSize="20sp"
+                android:text="Text" />
+
+            <!--Title Content for text-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/cadet_blue"
+                android:textSize="25sp"
+                android:text="Content: " />
+
+            <!--Content for text-->
+            <TextView
+                android:id="@+id/display_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="16dp"
+                android:textColor="@color/cadet_blue"
+                android:background="@drawable/edit_text_middle"
+                android:textSize="20sp"
+                android:text="Text" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!--Buttons-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginTop="480dp"
+        android:layout_height="100dp">
+
+        <!--Delete-->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button"
+            android:text="Delete" />
+
+        <!--Email-->
+        <Button
+            android:id="@+id/btnEmail"
+            android:layout_gravity="center"
+            android:layout_height="50dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/button"
+            android:text="Email" />
+    </LinearLayout>
+
+    <!--Menu button-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="570dp"
+        android:layout_height="match_parent">
+
+        <!--Return to menu-->
+        <Button
+            android:id="@+id/btnReturnMenu"
+            android:layout_height="50dp"
+            android:layout_width="300dp"
+            android:textAlignment="center"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button"
+            android:layout_marginBottom="100dp"
+            android:text="Return to Menu" />
+    </LinearLayout>
+</RelativeLayout>

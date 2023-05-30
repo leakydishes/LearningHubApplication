@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "135711343600",
+    "project_id": "learninghubapplication",
+    "storage_bucket": "learninghubapplication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:135711343600:android:e6ff12cf3e6953456b9335",
+        "android_client_info": {
+          "package_name": "com.example.learninghubapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "135711343600-5mo9epmbsmuv80tbhsekdqd1re6sct14.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC6UC9te90Izz40RQk3QZH3JnqrD70YshA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "135711343600-5mo9epmbsmuv80tbhsekdqd1re6sct14.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
