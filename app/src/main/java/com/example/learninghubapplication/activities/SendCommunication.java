@@ -24,7 +24,6 @@ public class SendCommunication extends AppCompatActivity {
     TextView inputMessage;
     EditText inputEmailAddress, inputSubject;
     Boolean checkEmailSent = false;
-
     String userName;
 
     //binding
@@ -57,6 +56,7 @@ public class SendCommunication extends AppCompatActivity {
         String subject = "ML Image to text: " + name;
         inputSubject.setText(subject);
 
+        //boolean to check email sent before progressing screens
         checkEmailSent = false;
 
         //click send button
@@ -78,6 +78,7 @@ public class SendCommunication extends AppCompatActivity {
                     intent.putExtra(Intent.EXTRA_EMAIL, new String[]{inputEmailAddress});
                     intent.putExtra(Intent.EXTRA_SUBJECT, inputSubject);
                     intent.putExtra(Intent.EXTRA_TEXT, inputMessage);
+
                     //find applications to send mail
                     intent.setType("message/rfc822");
 
@@ -105,6 +106,7 @@ public class SendCommunication extends AppCompatActivity {
             public void onClick(View v) {
                 if (checkEmailSent = true){
                     checkEmailSent = false; //reset to false
+
                     //return to menu after email sent
                     Intent intentHome = new Intent(SendCommunication.this,
                             HomeActivity.class);

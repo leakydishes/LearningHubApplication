@@ -12,30 +12,12 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
-import androidx.lifecycle.LiveData;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.room.Room;
 
 import com.example.learninghubapplication.R;
-import com.example.learninghubapplication.data.TextModelDao;
-import com.example.learninghubapplication.data.TextModelDatabase;
 import com.example.learninghubapplication.data.UserDAO;
 import com.example.learninghubapplication.data.UserDataBase;
-import com.example.learninghubapplication.model.TextModel;
 import com.example.learninghubapplication.model.User;
-
-import java.util.List;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
-import androidx.room.Room;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
         if(getIntent().hasExtra("byteArray")) {
             ImageView imv= new ImageView(this);
             Bitmap bitmap = BitmapFactory.decodeByteArray(
-                    getIntent().getByteArrayExtra("byteArray"), 0, getIntent().getByteArrayExtra("byteArray").length);
+                    getIntent().getByteArrayExtra("byteArray"),
+                    0, getIntent().getByteArrayExtra("byteArray").length);
             imv.setImageBitmap(bitmap);
         }
 
@@ -65,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         username_input = findViewById(R.id.username_input);
         password_input = findViewById(R.id.password_input);
 
-        // declare user database
-        // database build with class
+        // user database build with class
         userDataBase = Room.databaseBuilder(this, UserDataBase.class, "User")
                 .allowMainThreadQueries()
                 .build();
@@ -78,19 +60,12 @@ public class MainActivity extends AppCompatActivity {
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                Intent i = new Intent(MainActivity.this, HomeActivity.class);
-//                startActivity(i);
-//                finish();
-//            }
                 //to string input
                 String userName = username_input.getText().toString().trim();
                 String password = password_input.getText().toString().trim();
 
                 // get data from user class
                 User user = userDb.getUser(userName, password);
-
-                // insert into database
 
                 // check user exists
                 if (user != null) {
@@ -99,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(i);
                 }
                 else {
-                    Toast.makeText(MainActivity.this, "Unknown User, try again or Sign up", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this,
+                            "Unknown User, try again or Sign up", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -110,7 +86,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // go to sign up/ register page
-                Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(MainActivity.this,
+                        RegisterActivity.class);
                 startActivity(intent);
             }
         });

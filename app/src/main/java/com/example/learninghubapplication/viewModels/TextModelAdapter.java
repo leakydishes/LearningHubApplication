@@ -1,20 +1,15 @@
 package com.example.learninghubapplication.viewModels;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.DiffUtil;
-import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.learninghubapplication.R;
-import com.example.learninghubapplication.activities.SendCommunication;
 import com.example.learninghubapplication.model.TextModel;
 
 import java.util.List;
@@ -27,7 +22,8 @@ public class TextModelAdapter extends RecyclerView.Adapter<TextModelAdapter.MyVi
     private ItemClickListener clickListener; // interface global
 
     // constructor
-    public TextModelAdapter(List<TextModel> textModelList, ItemClickListener clickListener, Context context) {
+    public TextModelAdapter(List<TextModel> textModelList, ItemClickListener clickListener,
+                            Context context) {
         this.textModelList = textModelList;
         this.clickListener = (ItemClickListener) clickListener;
         this.context = context;
@@ -43,9 +39,11 @@ public class TextModelAdapter extends RecyclerView.Adapter<TextModelAdapter.MyVi
 
     @Override
     public void onBindViewHolder(@NonNull TextModelAdapter.MyViewHolder holder, int position) {
+        //find position
         holder.display_name.setText(textModelList.get(position).getName());
         holder.display_text.setText(textModelList.get(position).getText());
 
+        //click listener
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,6 +62,7 @@ public class TextModelAdapter extends RecyclerView.Adapter<TextModelAdapter.MyVi
         private TextView display_name, display_text;
         public MyViewHolder(View itemView) {
             super(itemView);
+            //set to view
             display_name = itemView.findViewById(R.id.display_name);
             display_text = itemView.findViewById(R.id.display_text);
         }

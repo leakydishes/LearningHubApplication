@@ -21,7 +21,6 @@ public class TextDetails extends AppCompatActivity {
     //variables
     TextView display_text, display_name;
     Button btnReturnMenu, btnDelete, btnEmail;
-
     String userName;
 
     @Override
@@ -68,6 +67,7 @@ public class TextDetails extends AppCompatActivity {
                 //create object
                 String msg = "Deleted Item";
                 Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+
                 // go back to main activity
                 Intent intent = new Intent(getBaseContext(), MainActivity.class);
                 startActivity(intent);

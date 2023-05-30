@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.lifecycle.ViewModelProvider;
 
 import android.Manifest;
 import android.content.Intent;
@@ -161,10 +160,12 @@ public class ReadText extends AppCompatActivity{
                     //get info from database
 
                     //start intent
-                    Intent intent = new Intent(ReadText.this, SendCommunication.class);
+                    Intent intent = new Intent(ReadText.this,
+                            SendCommunication.class);
                     intent.putExtra("textResult", result);
                     intent.putExtra("name", name);
                     Log.e("result", "--->>" + result);
+
                     //reset variables
                     inputName.setText("");
                     textResult.setText("");
@@ -211,26 +212,16 @@ public class ReadText extends AppCompatActivity{
 
     //get user permissions
     public void checkPermission(String permission, int requestCode) {
-        if (ContextCompat.checkSelfPermission(ReadText.this, permission) == PackageManager.PERMISSION_DENIED){
+        if (ContextCompat.checkSelfPermission(ReadText.this,
+                permission) == PackageManager.PERMISSION_DENIED){
+
             //get permission
-            ActivityCompat.requestPermissions(ReadText.this, new String[] {permission}, requestCode);
+            ActivityCompat.requestPermissions(ReadText.this,
+                    new String[] {permission}, requestCode);
         }else {
             //permission already granted
-            Toast.makeText(ReadText.this, "Permission has already been granted", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    //check permission result
-    public void onRequestPermissionResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults){
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        //if permission granted
-        if(requestCode==RESULT_OK){
-            if(grantResults.length>0 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(ReadText.this, "Storage permission Granted", Toast.LENGTH_SHORT).show();
-            }else {
-                //if permission denied
-                Toast.makeText(ReadText.this, "Storage permission Denied", Toast.LENGTH_SHORT).show();
-            }
+            Toast.makeText(ReadText.this, "Permission has already been granted",
+                    Toast.LENGTH_SHORT).show();
         }
     }
 

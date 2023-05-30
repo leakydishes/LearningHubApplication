@@ -2,14 +2,10 @@ package com.example.learninghubapplication.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
@@ -17,22 +13,12 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResult;
-import androidx.activity.result.ActivityResultCallback;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
-import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.room.Room;
 
 import com.example.learninghubapplication.R;
 import com.example.learninghubapplication.data.UserDAO;
 import com.example.learninghubapplication.data.UserDataBase;
 import com.example.learninghubapplication.model.User;
-
-import java.io.ByteArrayOutputStream;
 
 public class RegisterActivity extends AppCompatActivity {
 

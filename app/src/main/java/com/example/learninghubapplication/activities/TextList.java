@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TextList extends AppCompatActivity implements TextModelAdapter.ItemClickListener{
-
     // variables
     RecyclerView recyclerView;
     Button btnReturnMenu;
@@ -59,7 +58,6 @@ public class TextList extends AppCompatActivity implements TextModelAdapter.Item
                 startActivity(intentHome);
             }
         });
-
     }
 
 
@@ -67,26 +65,32 @@ public class TextList extends AppCompatActivity implements TextModelAdapter.Item
     private void getData() {
         // set view model
         textModel = new ArrayList<>();
-        textModel = TextModelDatabase.getDatabase(getApplicationContext()).textModelDao().getTextList();
+        textModel = TextModelDatabase.getDatabase(getApplicationContext())
+                .textModelDao()
+                .getTextList();
+
         // Lookup the recyclerview in activity layout
         RecyclerView recyclerview = (RecyclerView) findViewById(R.id.recyclerView);
+
         // Create adapter passing in the sample user data
         TextModelAdapter adapter = new TextModelAdapter(textModel, this, this);
 
         // Attach the adapter to the recyclerview to populate items
         recyclerview.setAdapter(adapter);
+
         // Set layout manager to position the items
         recyclerview.setLayoutManager(new LinearLayoutManager(this));
-
     }
 
     @Override
     public void onItemClick(TextModel textModel) {
         //start new activity
         Intent intent = new Intent(TextList.this, TextDetails.class);
+
         //get data clicked on
         String newName = textModel.getName();
         String newText = textModel.getText();
+
         //put extra intent
         intent.putExtra("name", newName);
         intent.putExtra("textResult", newText);
