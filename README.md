@@ -7,6 +7,8 @@ This repository accompanies 2023 paper.
 
 The Learning Hub application is a study tool which utilises Google’s ML Firebase and ML Kit to enhance the educational experience for students. By incorporating Google’s ML Smart Reply and ML Text Recognition models, users can interact with an AI system, convert text from images and email stored data. Application operates Google’s ML processing and Room’s SQL Lite local database for storing sensitive user information and converted text. Supporting Android’s Private Compute Core (PCC) principles, with users controlling data (inapplication permissions). 
 
+![overviewScreenshots](https://github.com/leakydishes/LearningHubApplication/assets/79079577/a18b24a7-26f7-43a9-8541-a2b5ad9f9032)
+
 ![diagram2](https://github.com/leakydishes/LearningHubApplication/assets/79079577/6c56f4b5-97ee-47fa-b035-64770b9e1f0e)
 
 ![diagram3](https://github.com/leakydishes/LearningHubApplication/assets/79079577/86af24b4-84d4-45e8-8b6b-9380cc018943)
