@@ -24,8 +24,11 @@ The Learning Hub application is a study tool which utilises Google’s ML Fireba
 ![diagram3](https://github.com/leakydishes/LearningHubApplication/assets/79079577/86af24b4-84d4-45e8-8b6b-9380cc018943)
 ###### Figure 4. ML Kit 2, 2023
 
-### Citing this work
+### References
 ##### [1] Google, ML Kit for Firebase, Firebase, 2019. https://firebase.google.com/docs/ml-kit
 ##### [2] Ashok Kumar S, Mastering Firebase for Android Development. Packt Publishing Ltd, 2018.
 ##### [3] N. G. Karthikeyan, Machine learning projects for mobile applications : build Android and IOS applications using TensorFlow Lite and Core ML. Birmingham: Packt Publishing, 2018.
 ##### [4] Eugenio Marchiori and Sarah de Haas and Sergey Volnov and Ronnie Falcon and Roxanne Pinto and Marco Zamarato, Android Private Compute Core Architecture, 2022. https://arxiv.org/abs/2209.10317
+
+### Citing this work
+
