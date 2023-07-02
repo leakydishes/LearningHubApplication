@@ -50,8 +50,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         //get data from main activity user
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra("User");
+        userName = getIntent().getStringExtra("User");
         Log.e("User", "--->>" + userName);
 
         //set to screen text and buttons
@@ -122,6 +121,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intentReadText = new Intent(HomeActivity.this, ReadText.class);
+                intentReadText.putExtra("User", userName);
                 startActivity(intentReadText);
                 finish();
             }
@@ -144,6 +144,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentTextList = new Intent(HomeActivity.this,
                         TextList.class);
+                intentTextList.putExtra("User", userName);
                 startActivity(intentTextList);
                 finish();
             }

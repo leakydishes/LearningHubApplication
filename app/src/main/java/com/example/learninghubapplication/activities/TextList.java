@@ -37,9 +37,8 @@ public class TextList extends AppCompatActivity implements TextModelAdapter.Item
         setContentView(R.layout.activity_text_list);
 
         //get data from previous input
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra("User");
-        Log.e("result", "--->>" + userName);
+        userName = getIntent().getStringExtra("User");
+        Log.e("text list result", "--->>" + userName);
 
         // set recycler view
         recyclerView = findViewById(R.id.recyclerView);
@@ -92,6 +91,7 @@ public class TextList extends AppCompatActivity implements TextModelAdapter.Item
         String newText = textModel.getText();
 
         //put extra intent
+        intent.putExtra("User", userName);
         intent.putExtra("name", newName);
         intent.putExtra("textResult", newText);
         startActivity(intent);

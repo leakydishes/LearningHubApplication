@@ -65,8 +65,7 @@ public class ReadText extends AppCompatActivity{
 
         //get data from main activity user
         //get data from previous input
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra("User");
+        userName = getIntent().getStringExtra("User");
         Log.e("User", "--->>" + userName);
 
         //set to screen

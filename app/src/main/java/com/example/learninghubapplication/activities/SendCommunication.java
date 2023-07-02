@@ -39,6 +39,8 @@ public class SendCommunication extends AppCompatActivity {
         String result = intent.getStringExtra("textResult");
         String name = intent.getStringExtra("name");
         Log.e("result", "--->>" + result);
+        userName = getIntent().getStringExtra("User");
+        Log.e("User", "--->>" + userName);
 
         //set binding
         binding = ActivitySendCommunicationBinding.inflate(getLayoutInflater());
@@ -78,6 +80,7 @@ public class SendCommunication extends AppCompatActivity {
                     intent.putExtra(Intent.EXTRA_EMAIL, new String[]{inputEmailAddress});
                     intent.putExtra(Intent.EXTRA_SUBJECT, inputSubject);
                     intent.putExtra(Intent.EXTRA_TEXT, inputMessage);
+                    intent.putExtra("User", userName);
 
                     //find applications to send mail
                     intent.setType("message/rfc822");

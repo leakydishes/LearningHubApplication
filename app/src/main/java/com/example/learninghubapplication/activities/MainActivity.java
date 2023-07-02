@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
     UserDataBase userDataBase; //declare database
     Button btn_sign_up, btn_sign_in;
     EditText username_input, password_input;
-    private FragmentManager fragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

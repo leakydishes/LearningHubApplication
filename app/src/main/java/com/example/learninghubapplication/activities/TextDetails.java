@@ -29,9 +29,8 @@ public class TextDetails extends AppCompatActivity {
         setContentView(R.layout.activity_text_details);
 
         //get data from previous input
-        Intent intent = getIntent();
-        String userName = intent.getStringExtra("User");
-        Log.e("result", "--->>" + userName);
+        userName = getIntent().getStringExtra("User");
+        Log.e("text detail result", "--->>" + userName);
 
         // set recycler view
         display_name = findViewById(R.id.display_name);
@@ -70,6 +69,7 @@ public class TextDetails extends AppCompatActivity {
 
                 // go back to main activity
                 Intent intent = new Intent(getBaseContext(), MainActivity.class);
+                intent.putExtra("User", userName);
                 startActivity(intent);
             }
         });
@@ -81,6 +81,7 @@ public class TextDetails extends AppCompatActivity {
                 Intent intent = new Intent(TextDetails.this, SendCommunication.class);
                 intent.putExtra("name", name);
                 intent.putExtra("textResult", text);
+                intent.putExtra("User", userName);
                 startActivity(intent);
                 finish();
             }
