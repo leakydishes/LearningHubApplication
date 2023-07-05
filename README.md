@@ -2,6 +2,10 @@
 ####  LearningHub, a novel pluggable personalized collaborative machine learning based Android application, as a study tool that uses Google's ML Firebase and ML Kit to improve the student's experience. By incorporating Google's ML Smart Response and Text Recognition models and collaboratively aggregating greater learning, Android apps can interact with the proposed collaborative learning framework (CLF) and convert text from images and data stored in emails. In addition to technical considerations, this article examines the problem solving achieved to combine learning capabilities, advanced coding techniques, and user-centered mobile design principles. We investigate how LearningHub operates Google’s ML processing and Room’s SQL Lite local database to store sensitive user information and converted text and interacts/contributes continuously with the CLF framework. Our Android app design delves into how LearningHub uses Android's Private Compute Core (PCC) principles, with users controlling data (for example, in-app permissions). Our objective of projecting and implementing the CLF environment-based LearningHub under Android 12 with image handling using modern libraries such as Glide and Picasso is demonstrated in our implementation for personalized responding experiences. The implementation of the Android app and CLF is available at GitHub.
 
 This repository accompanies 2023 paper.
+### PROPOSED ARCHITECTURE: COLLABORATIVE LEARNING FRAMEWORK
+![diagram]()
+###### Figure: A Pragmatic View on CLF Working Mechanism, 2023
+
 
 ### Overview
 ![diagram](https://github.com/leakydishes/LearningHubApplication/assets/79079577/a37944b5-e449-4b85-813e-1d772bb29e2c)
