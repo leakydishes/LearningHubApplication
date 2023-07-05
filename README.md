@@ -3,7 +3,7 @@
 
 This repository accompanies 2023 paper.
 ### PROPOSED ARCHITECTURE: COLLABORATIVE LEARNING FRAMEWORK
-![diagram]()
+![diagram](https://github.com/leakydishes/LearningHubApplication/blob/f789f42b301d98eba4b7503bff93635218d020e5/CLF.png)
 ###### Figure: A Pragmatic View on CLF Working Mechanism, 2023
 
 
