@@ -28,7 +28,7 @@ The Learning Hub application is a study tool which utilises Google’s ML Fireba
 ![diagram3](https://github.com/leakydishes/LearningHubApplication/assets/79079577/86af24b4-84d4-45e8-8b6b-9380cc018943)
 ###### Figure 4. ML Kit 2, 2023
 
-The personalized federated learning implementation is build ontop of https://github.com/JianXu95/FedPAC.
+The personalized federated learning implementation is build on top of https://github.com/JianXu95/FedPAC.
 
 ### References
 [1] B. McMahan et al., “Communication-efficient learning of deep net-
