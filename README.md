@@ -1,7 +1,7 @@
 ## LearningHub: A Pluggable Collaborative Machine Learning Framework for Android Applications
 We design and develop `LearningHub',  a new Android application that revolutionizes the learning experience by seamlessly integrating personalized and collaborative machine learning with blockchain. Designed with a user-centric approach, it utilizes Google's ML Firebase and ML Kit, featuring the design of a new Collaborative Learning Framework (CLF) for extracting and converting text from diverse sources. The design philosophy of LearningHub prioritizes advanced coding paradigms and learning capabilities, securely managing user-specific data through Google's ML processing and Room’s SQL Lite local database. Upholding user data sovereignty, LearningHub implements Android's Private Compute Core principles, allowing users control over in-app permissions. Another key highlight of this research work is the successful integration of blockchain technology within LearningHub's architecture, providing an additional layer of security and data integrity crucial for digital learning environments. This study shows further avenues for harnessing the advances in machine learning and blockchain to create a more secure, efficient, and personalized learning experience, with a specific focus on the implementation of the proposed LearningHub architecture.
 
-This repository accompanies 2023 paper.
+This repository accompanies 2024 paper.
 ### PROPOSED ARCHITECTURE: COLLABORATIVE LEARNING FRAMEWORK
 ![diagram](https://github.com/leakydishes/LearningHubApplication/blob/f789f42b301d98eba4b7503bff93635218d020e5/CLF.png)
 ###### Figure: A Pragmatic View on CLF Working Mechanism, 2023
